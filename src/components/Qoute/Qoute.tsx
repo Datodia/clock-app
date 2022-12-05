@@ -44,6 +44,7 @@ const Img = styled.img`
 
 const Quote = styled.div`
   width: 290px;
+  height: 200px;
 `
 const Author = styled.h5`
     font-size: 12px;
@@ -55,4 +56,5 @@ const Content = styled.p`
     font-size: 12px;
     font-weight: 400;
     color: white;
+    margin-bottom: 10px;
 `
