@@ -24,6 +24,11 @@ export interface Dark {
 }
 
 export interface Rotate {
-    rotate?: boolean | undefined;
-    setRorate?: React.Dispatch<React.SetStateAction<Rotate>>;
+    rotate: boolean;
+    setRotate?: React.Dispatch<React.SetStateAction<boolean>> | any;
+    timezone2?: string;
+    dayOfYear?: number;
+    weekDay?: number;
+    week?: number;
+    dark?: number | any;
 }

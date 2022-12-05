@@ -30,7 +30,7 @@ export const Time = ({ city, code, currentTime }: TimeType) => {
 const Wrapper = styled.div`
     width: 327px;
     margin: auto;
-   // margin-top: 200px;
+    margin-top: 54px;
 `
 
 const HelloDiv = styled.div`
