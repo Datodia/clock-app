@@ -22,3 +22,8 @@ export interface TimeType {
 export interface Dark {
     time: number;
 }
+
+export interface Rotate {
+    rotate?: boolean | undefined;
+    setRorate?: React.Dispatch<React.SetStateAction<Rotate>>;
+}

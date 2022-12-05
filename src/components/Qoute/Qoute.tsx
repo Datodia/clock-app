@@ -34,7 +34,8 @@ const Wrapper = styled.div`
     margin: auto;
 `
 const Btn = styled.button`
-    
+    background: transparent;
+    border: none;
 `
 const Img = styled.img`
     width: 17px;
@@ -43,14 +44,15 @@ const Img = styled.img`
 
 const Quote = styled.div`
   width: 290px;
-  height: 66px;
 `
 const Author = styled.h5`
     font-size: 12px;
     font-weight: 700;
+    color: white;
 `
 
 const Content = styled.p`
     font-size: 12px;
     font-weight: 400;
+    color: white;
 `

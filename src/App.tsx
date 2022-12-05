@@ -4,7 +4,8 @@ import { useState, useEffect } from 'react';
 import { Qoute } from './components/Qoute/Qoute'
 import { getCountriesForTimezone } from 'countries-and-timezones';
 import { Time } from './components/Time/Time';
-import { Dark, TimeType } from './Interface';
+import { Dark, Rotate, TimeType } from './Interface';
+import { More } from './components/More/More';
 
 
 function App() {
@@ -19,18 +20,15 @@ function App() {
   const oneDay: number = 1000 * 60 * 60 * 24;
   const dayOfYear: number = Math.floor(diff / oneDay);
 
-  const currentTime: number | string = date.getHours() + ":" + now.getMinutes();
+  const currentTime: number | string = ('0' + date.getHours()).slice(-2) + ":" + ('0' + now.getMinutes()).slice(-2);
   const time = date.getHours();
+
+  const [rotate, setRotate] = useState<Rotate | undefined>()
 
 
   setInterval(() => setDate(new Date()), 60 * 1000)
 
   const handleClick = () => {
-    const now: Date | number | bigint | any = new Date();
-    const start: Date | number | bigint | any = new Date(now.getFullYear(), 0, 0);
-    const diff: number = now - start;
-    const oneDay: number = 1000 * 60 * 60 * 24;
-    const dayOfYear: number = Math.floor(diff / oneDay);
 
     //return week number
     let week = Math.floor(dayOfYear / 7);
@@ -59,6 +57,10 @@ function App() {
         code={code}
         currentTime={currentTime}
       />
+      <More
+        rotate={rotate}
+        setRotate={setRotate}
+      />
     </Wrapper>
   )
 }
@@ -66,6 +68,8 @@ function App() {
 export default App
 
 const Wrapper = styled.div<Dark>`
+  background-color: #d8d8d8;
+  background-blend-mode: multiply; 
   background-image: url(${props => props.time > 18 || props.time < 6 ? ('assets/mobile/bg-image-nighttime.jpg') : ('assets/mobile/bg-image-daytime.jpg')});
   height: 100vh;
   padding-top: 32px;
