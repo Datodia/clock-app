@@ -12,7 +12,7 @@ export const More = ({ rotate, setRotate, timezone2, dayOfYear, weekDay, week, d
         <Container>
             <Wrapper>
                 <Button onClick={handleClick}>
-                    <Moretxt>MORE</Moretxt>
+                    {rotate ? <Moretxt>LESS</Moretxt> : <Moretxt>MORE</Moretxt>}
                     <Arrow rotate={rotate}><Img src="assets/desktop/icon-arrow-down.svg" /></Arrow>
                 </Button>
             </Wrapper>
@@ -55,6 +55,12 @@ const Wrapper = styled.div`
     @media screen and (min-width: 700px){
         width: 540px;
     }
+    @media screen and (min-width: 1000px){
+        display: flex;
+        justify-content: end;
+        margin-right: 165px;
+        margin-top: -40px
+    }
 `
 
 const Button = styled.button`
@@ -90,6 +96,9 @@ const Arrow = styled.div<Rotate>`
     justify-content: center;
     transform: rotate(${props => props.rotate ? '180deg' : "0deg"});
     transition: all .5s;
+    &:hover{
+        background-color: #999;
+    }
     @media screen and (min-width: 700px){
         width: 40px;
         height: 40px;
@@ -112,6 +121,10 @@ const Wrapper2 = styled.div<Rotate | any>`
         height: 300px;
         padding: 70px 114px;
     }
+    @media screen and (min-width: 1000px){
+        height: 350px;
+    }
+    
 `
 
 const Div = styled.div`
@@ -120,6 +133,9 @@ const Div = styled.div`
         width: 540px;
         margin: auto;
         justify-content: space-between;
+    }
+    @media screen and (min-width: 1000px){
+        width: 90%;
     }
     
 `
@@ -143,6 +159,11 @@ const LeftTxt = styled.h1<Rotate | any>`
        font-size: 13px;
        width: 170px
     }
+    @media screen and (min-width: 1000px){
+        font-size: 15px;
+        width: 200px;
+        margin-bottom: 15px;
+    }
 `
 const RightTxt = styled.h1<Rotate | any>`
     font-size: 20px;
@@ -150,5 +171,8 @@ const RightTxt = styled.h1<Rotate | any>`
     color: ${props => props.dark > 18 || props.dark < 6 ? "white" : 'black'};
     @media screen and (min-width: 700px){
        font-size: 35px;
+    }
+    @media screen and (min-width: 1000px){
+        font-size: 60px;;
     }
 `

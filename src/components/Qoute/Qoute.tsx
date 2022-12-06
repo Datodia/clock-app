@@ -32,9 +32,13 @@ const Wrapper = styled.div`
     align-items: flex-start;
     width: 327px;
     margin: auto;
-    @media screen and (min-width: 700px){
+    @media screen and (min-width: 1000px){
         gap: 15px;
         width: 540px;
+    }
+    @media screen and (min-width: 1000px){
+        margin-left: 10%;
+        width: 600px;
     }
 `
 const Btn = styled.button`
@@ -44,6 +48,10 @@ const Btn = styled.button`
 const Img = styled.img`
     width: 17px;
     height: 17px;
+    @media screen and (min-width: 1000px){
+        width: 30px;
+        height: 30px;
+    }
 `
 
 const Quote = styled.div`
@@ -53,6 +61,10 @@ const Quote = styled.div`
         width: 540px;
         height: 180px;
     }
+
+    @media screen and (min-width: 1000px){
+       height: 300px;
+    } 
 `
 const Author = styled.h5`
     font-size: 12px;
@@ -60,6 +72,9 @@ const Author = styled.h5`
     color: white;
     @media screen and (min-width: 700px){
         font-size: 18px;
+    }
+    @media screen and (min-width: 1000px){
+        font-size: 20px;
     }
 `
 
@@ -70,5 +85,8 @@ const Content = styled.p`
     margin-bottom: 10px;
     @media screen and (min-width: 700px){
         font-size: 18px;
+    }
+    @media screen and (min-width: 1000px){
+        font-size: 20px;
     }
 `

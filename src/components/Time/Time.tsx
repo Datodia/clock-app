@@ -34,6 +34,9 @@ const Wrapper = styled.div`
     @media screen and (min-width: 700px){
         width: 540px;
     }
+    @media screen and (min-width: 1000px){
+        margin-left: 10%;
+    }
 `
 
 const HelloDiv = styled.div`
