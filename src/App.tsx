@@ -58,6 +58,7 @@ const Wrapper = styled.div<Dark>`
   background-blend-mode: multiply; 
   background-image: url(${props => props.time > 18 || props.time < 6 ? ('assets/mobile/bg-image-nighttime.jpg') : ('assets/mobile/bg-image-daytime.jpg')});
   height: 100vh;
+  overflow-y: hidden;
   padding-top: 32px;
 
   @media screen and (min-width: 375px){
