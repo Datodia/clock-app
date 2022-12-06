@@ -59,4 +59,9 @@ const Wrapper = styled.div<Dark>`
   background-image: url(${props => props.time > 18 || props.time < 6 ? ('assets/mobile/bg-image-nighttime.jpg') : ('assets/mobile/bg-image-daytime.jpg')});
   height: 100vh;
   padding-top: 32px;
+
+  @media screen and (min-width: 375px){
+    background-image: url(${props => props.time > 18 || props.time < 6 ? ('assets/tablet/bg-image-nighttime.jpg') : ('assets/tablet/bg-image-daytime.jpg')});
+    padding-top: 80px;
+  }
 `
