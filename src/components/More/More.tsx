@@ -45,13 +45,16 @@ export const More = ({ rotate, setRotate, timezone2, dayOfYear, weekDay, week, d
 }
 
 const Container = styled.div`
-    position: relative
+
 `
 
 const Wrapper = styled.div`
     width: 327px;
     margin: auto;
     margin-top: 32px;
+    @media screen and (min-width: 700px){
+        width: 540px;
+    }
 `
 
 const Button = styled.button`
@@ -63,11 +66,19 @@ const Button = styled.button`
     border-radius: 10px;
     border: none;
     margin-bottom: 40px;
+    @media screen and (min-width: 700px){
+        width: 140px;
+        height: 50px;
+        border-radius: 28px;
+    }
 `
 const Moretxt = styled.h1`
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 3.75px;
+    @media screen and (min-width: 700px){
+        font-size: 16px;
+    }
 `
 const Arrow = styled.div<Rotate>`
     width: 32px;
@@ -79,6 +90,10 @@ const Arrow = styled.div<Rotate>`
     justify-content: center;
     transform: rotate(${props => props.rotate ? '180deg' : "0deg"});
     transition: all .5s;
+    @media screen and (min-width: 700px){
+        width: 40px;
+        height: 40px;
+    }
 `
 const Img = styled.img`
     
@@ -86,16 +101,26 @@ const Img = styled.img`
 
 const Wrapper2 = styled.div<Rotate | any>`
     width: 100vw;
+    position: fixed;
+    bottom: 0;
     height: 256px;
     background-color: rgba(${props => props.dark > 18 || props.dark < 6 ? '0,0,0,0.75' : '255,255,255,0.75'});
     backdrop-filter: blur(4px);
     position: absolute;
     padding: 48px 26px;
+    @media screen and (min-width: 700px){
+        height: 300px;
+        padding: 70px 114px;
+    }
 `
 
 const Div = styled.div`
-    width: 317px;
-    margin: auto;
+    @media screen and (min-width: 700px){
+        display: flex;
+        width: 540px;
+        margin: auto;
+        justify-content: space-between;
+    }
     
 `
 const Year = styled.div`
@@ -103,15 +128,27 @@ const Year = styled.div`
     align-items: center;
     justify-content: space-between;
     margin-bottom: 16px;
+    @media screen and (min-width: 700px){
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 `
 const LeftTxt = styled.h1<Rotate | any>`
     font-size: 10px;
-    color: ${props => props.dark > 18 || props.dark < 6 ? "black" : 'white'};
+    color: ${props => props.dark > 18 || props.dark < 6 ? "white" : 'black'};
     letter-spacing: 2px;
     font-weight: 400;
+    @media screen and (min-width: 700px){
+       font-size: 13px;
+       width: 170px
+    }
 `
 const RightTxt = styled.h1<Rotate | any>`
     font-size: 20px;
     font-weight: 700;
-    color: ${props => props.dark > 18 || props.dark < 6 ? "black" : 'white'};
+    color: ${props => props.dark > 18 || props.dark < 6 ? "white" : 'black'};
+    @media screen and (min-width: 700px){
+       font-size: 35px;
+    }
 `

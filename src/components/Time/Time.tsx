@@ -31,6 +31,9 @@ const Wrapper = styled.div`
     width: 327px;
     margin: auto;
     margin-top: 54px;
+    @media screen and (min-width: 700px){
+        width: 540px;
+    }
 `
 
 const HelloDiv = styled.div`
@@ -38,13 +41,20 @@ const HelloDiv = styled.div`
     width: 200px;
     align-items: center;
     justify-content: space-between;
+    @media screen and (min-width: 700px){
+        width: 230px;
+    }
 `
 
 const HelloTxt = styled.div`
     font-size: 15px;
     font-weight: 400;
     color: white;
-    letter-spacing: 3px
+    letter-spacing: 3px;
+    @media screen and (min-width: 700px){
+        font-size: 18px;
+    }
+    
 `
 const Img = styled.img``
 
@@ -52,6 +62,9 @@ const TimeTxt = styled.h1`
     font-size: 100px;
     font-weight: 700;
     color: white;
+    @media screen and (min-width: 700px){
+        font-size: 150px;
+    }
 `
 
 const City = styled.h1`
@@ -59,4 +72,7 @@ const City = styled.h1`
     color: white;
     letter-spacing: 3px;
     text-transform: upperCase;
+    @media screen and (min-width: 700px){
+        font-size: 18px;
+    }
 `
