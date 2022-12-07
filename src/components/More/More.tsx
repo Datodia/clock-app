@@ -123,7 +123,7 @@ const Wrapper2 = styled.div<Rotate | any>`
         padding: 70px 114px;
     }
     @media screen and (min-width: 1000px){
-        height: 40vh;
+        height: 44vh;
     }
     
 `
