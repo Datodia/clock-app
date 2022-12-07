@@ -35,9 +35,11 @@ const Wrapper = styled.div`
     margin-top: 154px;
     @media screen and (min-width: 700px){
         width: 540px;
+        margin-top: 54px;
     }
     @media screen and (min-width: 1000px){
         margin-left: 10%;
+        margin-top: 54px;
     }
 `
 
