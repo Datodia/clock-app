@@ -32,7 +32,7 @@ export const Time = ({ city, code, currentTime }: TimeType) => {
 const Wrapper = styled.div`
     width: 327px;
     margin: auto;
-    margin-top: 54px;
+    margin-top: 154px;
     @media screen and (min-width: 700px){
         width: 540px;
     }
