@@ -12,11 +12,13 @@ export const Time = ({ city, code, currentTime }: TimeType) => {
                     <HelloDiv>
                         <Img src="assets/desktop/icon-moon.svg" />
                         <HelloTxt>GOOD NIGHT</HelloTxt>
+                        <Span>, IT’S CURRENTLY</Span>
                     </HelloDiv>
                     :
                     <HelloDiv>
                         <Img src="assets/desktop/icon-sun.svg" />
                         <HelloTxt>GOOD MORNING</HelloTxt>
+                        <Span>, IT’S CURRENTLY</Span>
                     </HelloDiv>
             }
 
@@ -45,7 +47,7 @@ const HelloDiv = styled.div`
     align-items: center;
     justify-content: space-between;
     @media screen and (min-width: 700px){
-        width: 230px;
+        width: 450px;
     }
 `
 
@@ -77,5 +79,16 @@ const City = styled.h1`
     text-transform: upperCase;
     @media screen and (min-width: 700px){
         font-size: 18px;
+    }
+`
+
+const Span = styled.span`
+    display: none;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    letter-spacing: 3px;
+    @media screen and (min-width: 700px){
+        display: flex;
     }
 `

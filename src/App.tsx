@@ -67,7 +67,8 @@ const Wrapper = styled.div<Dark>`
   }
   @media screen and (min-width: 768px){
     background-image: url(${props => props.time > 18 || props.time < 6 ? ('assets/desktop/bg-image-nighttime.jpg') : ('assets/desktop/bg-image-daytime.jpg')});
-    background-size: 100vw 100vh;
+    background-size: 100vw;
+    background-position: center;
     padding-top: 80px;
   }
 `

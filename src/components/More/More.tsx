@@ -112,17 +112,18 @@ const Wrapper2 = styled.div<Rotate | any>`
     width: 100vw;
     position: fixed;
     bottom: 0;
-    height: 256px;
+    height: 30vh;
     background-color: rgba(${props => props.dark > 18 || props.dark < 6 ? '0,0,0,0.75' : '255,255,255,0.75'});
     backdrop-filter: blur(4px);
     position: absolute;
     padding: 48px 26px;
+    overflow: hidden;
     @media screen and (min-width: 700px){
-        height: 300px;
+        height: 30vh;
         padding: 70px 114px;
     }
     @media screen and (min-width: 1000px){
-        height: 350px;
+        height: 40vh;
     }
     
 `
