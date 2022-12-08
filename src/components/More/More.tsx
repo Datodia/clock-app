@@ -20,22 +20,22 @@ export const More = ({ rotate, setRotate, timezone2, dayOfYear, weekDay, week, d
                 <Wrapper2 dark={dark}>
                     <Div>
                         <Year>
-                            <LeftTxt>CURRENT TIMEZONE</LeftTxt>
-                            <RightTxt>{timezone2}</RightTxt>
+                            <LeftTxt dark={dark}>CURRENT TIMEZONE</LeftTxt>
+                            <RightTxt dark={dark} >{timezone2}</RightTxt>
                         </Year>
                         <Year>
-                            <LeftTxt>DAY OF THE YEAR</LeftTxt>
-                            <RightTxt>{dayOfYear}</RightTxt>
+                            <LeftTxt dark={dark}>DAY OF THE YEAR</LeftTxt>
+                            <RightTxt dark={dark}>{dayOfYear}</RightTxt>
                         </Year>
                     </Div>
                     <Div>
                         <Year>
-                            <LeftTxt>DAY OF THE WEEK</LeftTxt>
-                            <RightTxt>{weekDay === 0 ? 7 : weekDay}</RightTxt>
+                            <LeftTxt dark={dark}>DAY OF THE WEEK</LeftTxt>
+                            <RightTxt dark={dark}>{weekDay === 0 ? 7 : weekDay}</RightTxt>
                         </Year>
                         <Year>
-                            <LeftTxt>WEEK NUMBER</LeftTxt>
-                            <RightTxt>{week}</RightTxt>
+                            <LeftTxt dark={dark}>WEEK NUMBER</LeftTxt>
+                            <RightTxt dark={dark}>{week}</RightTxt>
                         </Year>
                     </Div>
                 </Wrapper2>

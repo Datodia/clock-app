@@ -3,8 +3,6 @@ import { TimeType } from "../../Interface"
 
 export const Time = ({ city, code, currentTime }: TimeType) => {
 
-    //console.log(parseInt(currentTime))
-
     return (
         <Wrapper>
             {

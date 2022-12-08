@@ -26,9 +26,13 @@ function App() {
   const [rotate, setRotate] = useState(false)
   const dark = time;
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDate(new Date())
+    }, 1000);
 
-  setInterval(() => setDate(new Date()), 60 * 1000)
-
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <Wrapper time={time}>
